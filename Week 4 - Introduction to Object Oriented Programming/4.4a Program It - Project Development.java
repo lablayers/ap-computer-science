@@ -19,7 +19,7 @@ public class Main {
       System.out.println("Write a program that displays your name, address, and telephone number.");
  
       System.out.println("Hey, my name is Victor Lourng.");
-      System.out.println("I just me you and this is crazy.");
+      System.out.println("I just met you and this is crazy.");
       System.out.println("So here's my number, call me maybe?");
       System.out.println("Here you go: +1 (571)969-1778");
       System.out.println("And some address for good measure: 85 Buffalo Lane, Nowhere, OK, 73038.");
