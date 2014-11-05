@@ -30,20 +30,88 @@ public class Magpie3
 	public String getResponse(String statement)
 	{
 		String response = "";
-		if (statement.length() == 0)
+		if (findKeyword(statement, "no") >= 0)
 		{
-			response = "Say something, please.";
+			response = "Why so negative? :-(";
 		}
-		else if (findKeyword(statement, "no") >= 0)
+		else if (findKeyword(statement, "yes") >= 0)
 		{
-			response = "Why so negative?";
+			response = "Yay! :-D";
+		}
+		else if (findKeyword(statement, "maybe") >= 0)
+		{
+			response = "Oh really? Pick a side! :-?";
+		}
+		else if (findKeyword(statement, "exist") >= 0)
+		{
+			response = "I exist for however long you want me to. ;-)";
+		}
+		else if (findKeyword(statement, "name") >= 0)
+		{
+			response = "Nice to meet you! I'm Magpie. ;-)";
+		}
+		else if (findKeyword(statement, "nuzzle") >= 0)
+		{
+			response = "*nuzzles back* :-B";
 		}
 		else if (findKeyword(statement, "mother") >= 0
 				|| findKeyword(statement, "father") >= 0
+				|| findKeyword(statement, "mom") >= 0
+				|| findKeyword(statement, "dad") >= 0
 				|| findKeyword(statement, "sister") >= 0
 				|| findKeyword(statement, "brother") >= 0)
 		{
-			response = "Tell me more about your family.";
+			response = "Tell me more about your family. :-O";
+		}
+		else if (findKeyword(statement, "dog") >= 0
+				|| findKeyword(statement, "cat") >= 0)
+		{
+			response = "Tell me more about your pets. :-O";
+		}
+		else if (findKeyword(statement, "Nelson") >= 0
+				|| findKeyword(statement, "Yuka") >= 0)
+		{
+			response = "She sounds like good teacher. :-)";
+		}
+		else if (statement.length() < 1)
+		{
+			response = "Say something, please. ;-P";
+		}
+		else if (findKeyword(statement, "Athos") >= 0
+				|| findKeyword(statement, "Porthos") >= 0
+				|| findKeyword(statement, "Aramis") >= 0)
+		{
+			response = "Ah, the three musketeers. Love them! /-)";
+		}
+		else if (findKeyword(statement, "weather") >= 0
+				|| findKeyword(statement, "sunny") >= 0
+				|| findKeyword(statement, "butty") >= 0
+				|| findKeyword(statement, "wind") >= 0
+				|| findKeyword(statement, "rain") >= 0
+				|| findKeyword(statement, "hot") >= 0
+				|| findKeyword(statement, "cold") >= 0
+				|| findKeyword(statement, "mild") >= 0
+				|| findKeyword(statement, "cool") >= 0)
+		{
+			response = "Weather nerd! '-)";
+		}
+		else if (findKeyword(statement, "dinosaurs") >= 0
+				|| findKeyword(statement, "floppy") >= 0
+				|| findKeyword(statement, "tamagotchi") >= 0)
+		{
+			response = "They don't make things like these any more. :-/";
+		}
+		else if (findKeyword(statement, "happy") >= 0
+				|| findKeyword(statement, "awesome") >= 0
+				|| findKeyword(statement, "great") >= 0)
+		{
+			response = "Glad to hear! I'm doing awesome as well. :-D";
+		}
+		else if (findKeyword(statement, "sad") >= 0
+				|| findKeyword(statement, "cry") >= 0
+				|| findKeyword(statement, "worried") >= 0)
+		{
+			response = "I'm sorry to hear that. :'(";
 		}
 		else
 		{
