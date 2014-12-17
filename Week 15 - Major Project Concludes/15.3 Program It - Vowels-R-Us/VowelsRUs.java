@@ -66,9 +66,6 @@ public class VowelsRUs {
 		System.out.println("          Suffix : " + suffixed);
 	}
 	private static String getPlural(String line) {
-		return "lol";
-	}
-	private static String getPlural(String line) {
 	    // Split line into initial word, where word is the content before the first space
 	    String word = line.substring(0,line.lastIndexOf(" "));
 
